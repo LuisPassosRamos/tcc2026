@@ -1,9 +1,8 @@
 // capitulos/01-introducao.typ — Capítulo 1: Introdução.
-// Recursos do template demonstrados aqui: #abbrev (siglas), #gloss (glossário),
-// #cite e #prose (citações indiretas), nota de rodapé, #figura com fonte de terceiros,
-// referência cruzada com @rótulo e lista não numerada.
-// Pode ser aberto sozinho no preview: o #show: capitulo.with(...) aplica o estilo e a numeração.
-// Rótulos de outros capítulos aparecem como ‹rótulo› em vermelho; no main.typ, saem certos.
+// Revisão em 13/11/2026 conforme qualidade/criterios.md.
+// Recorte proposto: aplicação exploratória com 1 ou 2 estudantes do ensino médio.
+// Público e quantidade informados pelo autor; problema, pressuposto e objetivos são propostas.
+// Confirmar campus, conhecimentos prévios, atividades e protocolo antes da aplicação.
 #import "../ifbasaj-tcc/imports.typ": *
 #show: capitulo.with(numero: 1)
 
@@ -11,84 +10,53 @@
 
 == Contextualização <sec-contextualizacao>
 
-#orientacao[
-  DEVE situar o tema e o cenário real em que o problema aparece, sempre com fontes.
-  NÃO DEVE apresentar a solução, a ferramenta ou a tecnologia do trabalho — a proposta só aparece
-  na @sec-hipotese. NÃO DEVE adiantar resultados nem trazer citação longa.
-]
+O estudo de portas lógicas e de suas combinações fornece fundamentos para a compreensão dos sistemas digitais. Sua aprendizagem envolve relacionar operações booleanas, representações dos circuitos e valores de entrada e saída. No ensino desses conteúdos, a abstração dos conceitos e a articulação entre teoria e prática constituem desafios discutidos por #prose("dondici2025").#footnote[A organização do plano, a busca de fontes, a redação preliminar e a revisão deste manuscrito contaram com apoio do Codex, ferramenta de inteligência artificial generativa. Cabe ao autor conferir o conteúdo, as referências e as decisões apresentadas, em diálogo com a orientação.]
 
-// Sigla: a 1ª ocorrência exige `long:` e escreve "Nome por extenso (SIGLA)";
-// as seguintes escrevem só a sigla. A Lista de abreviaturas e siglas é gerada sozinha.
-O #abbrev("ifba", long: "Instituto Federal de Educação, Ciência e Tecnologia da Bahia") oferece, no campus Santo Antônio de Jesus, o curso de #abbrev("ads", long: "Análise e Desenvolvimento de Sistemas"). Nas demais menções, basta escrever #abbrev("ifba") ou #abbrev("ads").
+Os jogos educacionais digitais constituem uma das abordagens investigadas para a exploração desses conteúdos. Seu uso envolve a articulação entre a experiência de jogar, as tarefas propostas e os objetivos de aprendizagem. #prose("plass2015") discutem essa articulação a partir de perspectivas cognitivas, motivacionais, afetivas e socioculturais. Esse referencial permite examinar tanto o conteúdo trabalhado quanto as condições de interação em que as atividades ocorrem.
 
-// Glossário: o termo aparece normal no texto e a definição vai para o Glossário, no fim.
-Descreva o cenário em que o problema ocorre. Termos técnicos que o leitor pode não conhecer, como #gloss("deploy")[Implantação de uma versão do software em um ambiente de execução.], podem ser definidos no glossário. Toda afirmação sobre o cenário precisa de fonte #cite("sommerville2011")#footnote[Notas de rodapé servem para explicações curtas que interromperiam o texto. Use com moderação.].
+Em uma revisão sistemática com meta-análise, #prose("clark2016") identificaram resultados favoráveis ao uso de jogos digitais na aprendizagem, com variações associadas às características dos jogos e dos estudos analisados. No campo específico dos circuitos lógicos, #prose("dondici2025") apontam limitações na avaliação da eficácia dos jogos encontrados. A investigação de uma aplicação educacional demanda, portanto, a delimitação das atividades, do contexto de uso e das evidências que permitirão examinar a experiência.
 
-#figura(
-  image("../assets/imagens/logo.svg", width: 40%),
-  caption: [Exemplo de figura com fonte de terceiros],
-  source: [Adaptado de #prose("typstdocs")],
-) <fig-exemplo-contexto>
-
-Toda figura precisa ser citada no texto antes ou logo depois de aparecer, como na @fig-exemplo-contexto. #lorem(40)
+O foco deste trabalho é a exploração das relações entre entradas e saídas de portas lógicas por estudantes do ensino médio, em atividades de identificação, previsão e análise de circuitos.
 
 == Problema de pesquisa <sec-problema>
 
-#orientacao[
-  DEVE formular o problema de forma explícita, de preferência como pergunta, e dizer o que fica
-  fora do escopo. NÃO DEVE ser uma solução disfarçada, como "o problema é que não existe
-  o sistema X".
-]
+Propõe-se a seguinte questão de pesquisa: _quais possibilidades e dificuldades se apresentam na exploração das relações entre entradas e saídas de portas lógicas por estudantes do ensino médio durante atividades interativas de construção e análise de circuitos?_
 
-Diante do cenário descrito, este trabalho investiga a seguinte questão: _como ...?_ #lorem(30)
+O recorte proposto abrange AND, OR e XOR com duas entradas e NOT com uma entrada, seguidas de combinações simples e acíclicas, isto é, sem caminhos de realimentação. As atividades considerarão entradas conectadas com valores binários definidos. Circuitos sequenciais, projeto de processadores e circuitos eletrônicos físicos ficam fora do escopo da investigação.
 
-Fica fora do escopo deste trabalho ...
+A aplicação prevista envolve um ou dois estudantes do ensino médio do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, em caráter exploratório. A unidade de análise será a realização de cada tarefa por participante, incluindo previsões, explicações, erros e ajuda recebida. A interpretação considerará os conhecimentos prévios dos participantes, a familiaridade com o jogo e a mediação durante as atividades.
+
+As possibilidades de uso serão examinadas pela realização das ações propostas e pela relação entre as explicações e o comportamento dos circuitos. As dificuldades serão caracterizadas pelos obstáculos conceituais e de interação registrados nas sessões. As conclusões se limitarão aos casos acompanhados e às condições da aplicação.
 
 == Hipótese ou pressuposto da solução <sec-hipotese>
 
-#orientacao[
-  DEVE ficar exatamente aqui: depois do problema e antes dos objetivos. É o único lugar
-  do capítulo em que a proposta de solução aparece. DEVE ser testável: o Capítulo 5 precisa
-  conseguir dizer se ela se sustentou.
-]
+Parte-se do pressuposto de que a construção e a análise de circuitos em um ambiente de jogo podem favorecer a exploração das relações entre entradas e saídas de portas lógicas, mediante tarefas de previsão e explicação do comportamento observado. Para investigar esse pressuposto, propõe-se o uso do LogicGates, um mod para o Hytale desenvolvido pelo autor. O termo _mod_ designa uma extensão que acrescenta ou modifica recursos de um jogo. O recurso desenvolvido oferece componentes de entrada, portas lógicas, cabos e indicadores visuais para a montagem de circuitos.
 
-Parte-se do pressuposto de que ... #lorem(30)
+O pressuposto será examinado por meio da correspondência dos estados simulados com tabelas verdade independentes da implementação e dos registros de uso pelos participantes. A identificação das entradas e saídas, a formulação de previsões e a explicação coerente dos resultados constituirão indícios favoráveis à exploração pretendida. Erros persistentes e interpretações equivocadas dos indicadores serão analisados como possíveis restrições, considerando os conhecimentos prévios e as intervenções realizadas.
+
+A análise da mediação distinguirá a orientação sobre os conceitos da ajuda necessária à operação do jogo. Essa distinção permitirá discutir as condições da execução das tarefas e o apoio requerido em cada caso. O desempenho observado será interpretado no contexto das sessões, com alcance exploratório.
+
+As convenções do software para conexões ausentes e para portas com mais entradas serão explicitadas no desenvolvimento, conforme o recorte da @sec-problema.
 
 == Objetivo geral <sec-objetivo-geral>
 
-#orientacao[
-  Uma frase, com um único verbo no infinitivo, que responde ao problema da @sec-problema.
-  NÃO DEVE ser um passo de método, como "fazer revisão bibliográfica".
-]
-
-Desenvolver ... para ...
+Avaliar a adequação de um recurso interativo à exploração das relações entre entradas e saídas de portas lógicas por estudantes do ensino médio, considerando sua correção funcional e os registros de uma aplicação exploratória.
 
 == Objetivos específicos <sec-objetivos-especificos>
 
-#orientacao[
-  Lista NÃO numerada, com marcador `-`, de 3 a 5 itens, cada um com um verbo no
-  infinitivo e verificável nas Considerações finais. Evite verbos vagos: conhecer,
-  entender, compreender, estudar.
-]
-
-- Levantar ...;
-- Modelar ...;
-- Implementar ...;
-- Avaliar ....
+- Sistematizar os fundamentos de lógica digital e de aprendizagem baseada em jogos pertinentes às atividades propostas;
+- Documentar os requisitos, as decisões de desenvolvimento e as regras de funcionamento do recurso relacionadas ao recorte didático;
+- Elaborar uma sequência de atividades de identificação, previsão e análise do comportamento de portas lógicas e circuitos combinacionais;
+- Verificar a correspondência entre o comportamento dos circuitos avaliados e as tabelas verdade especificadas de forma independente da implementação;
+- Analisar os registros individuais da aplicação quanto à execução das tarefas, às explicações apresentadas, às dificuldades de uso e à mediação necessária.
 
 == Justificativa <sec-justificativa>
 
-#orientacao[
-  DEVE explicar por que o problema importa, com evidências: dados, fontes, contexto.
-  NÃO DEVE se basear só em opinião nem repetir a contextualização.
-]
+#prose("cagnini2015") relatam uma experiência com desafios no Minecraft envolvendo portas lógicas e multiplexadores, aplicada a ingressantes de cursos de Computação no ensino superior. O presente trabalho delimita outro contexto de aplicação, com estudantes do ensino médio e atividades centradas em quatro operações lógicas. A mudança de público motiva o exame das tarefas e das condições de uso.
 
-#lorem(60)
+A relevância educacional da investigação decorre da articulação entre conteúdo, atividade e evidência de uso. #prose("biggs1996") apresenta o alinhamento entre objetivos, atividades de ensino e avaliação como princípio de planejamento. #prose("leacock2007") incluem a precisão do conteúdo e a usabilidade da interação entre as dimensões de qualidade dos recursos educacionais multimídia. Esses fundamentos orientam a organização das tarefas e a análise das condições em que os participantes as realizam.
 
-== Organização do trabalho <sec-organizacao>
+A contribuição técnica pretendida reúne a documentação de requisitos e decisões de desenvolvimento, a especificação das regras dos componentes e a verificação de circuitos em relação às operações booleanas selecionadas. No campo educacional, pretende-se produzir uma sequência de atividades com respostas esperadas e uma análise dos registros individuais da aplicação. Essas entregas articulam desenvolvimento de software e avaliação de uso de um recurso educacional. Os resultados poderão subsidiar ajustes no artefato e no roteiro, bem como orientar aplicações posteriores.
 
-#orientacao[
-  Escreva por último, quando todos os capítulos existirem. Um parágrafo curto por capítulo. Use referências cruzadas: se um título mudar, o número se atualiza sozinho.
-]
-
-O @cap-referencial apresenta ... O @cap-correlatos compara ... O @cap-metodologia descreve ... O @cap-desenvolvimento detalha ... O @cap-resultados discute ... Por fim, o @cap-consideracoes retoma os objetivos e aponta trabalhos futuros.
+// == Organização do trabalho <sec-organizacao>
+// Redigir após a consolidação dos capítulos, conforme a orientação do template.
